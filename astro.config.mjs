@@ -11,7 +11,7 @@ import AstroPWA from "@vite-pwa/astro";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://astros.zank.studio",
+	site: "https://multi.pyramidion.dev",
 	vite: {
 		define: {
 			__DATE__: `'${new Date().toISOString()}'`,
@@ -23,11 +23,10 @@ export default defineConfig({
 		NetlifyCMS({
 			config: {
 				backend: {
-					name: "github",
-					repo: "zankhq/astros",
+					name: "git-gateway",
+					repo: "Torqain3/astros",
 					branch: "main",
-					base_url: "https://astros.zank.studio",
-					auth_endpoint: "/api/auth",
+					base_url: "https://multi.pyramidion.dev",
 				},
 				media_folder: "public/images",
 				public_folder: "/images",
@@ -120,7 +119,6 @@ export default defineConfig({
 					},
 				],
 			},
-			disableIdentityWidgetInjection: true,
 		}),
 		astroI18next(),
 		alpinejs(),
